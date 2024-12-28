@@ -1,0 +1,253 @@
+/* Estilos globales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Header */
+header {
+    background-color: #d8c18f;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+header img {
+    max-width: 50px;
+    border-radius: 50%;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+header nav ul li a:hover {
+    background-color: #FFC107;
+    color: #ac986d;
+}
+
+/* Secciones del menú */
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #ac986d;
+    border-bottom: 2px solid #FFC107;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Ítems del menú */
+.menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-around;
+}
+
+.menu-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 250px; /* Reducido el ancho de cada ítem */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 0.8rem; /* Reducido el padding para que todo se vea más compacto */
+    overflow: hidden;
+}
+
+.menu-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    max-height: 150px; /* Mantener las imágenes más pequeñas */
+}
+
+/* Hacer que el contenido del texto se mantenga compacto */
+.menu-item h3 {
+    color: #ac986d;
+    font-size: 1.4rem; /* Reducido el tamaño del texto */
+    margin: 0.5rem 0;
+}
+
+.menu-item p {
+    color: #666;
+    font-size: 0.85rem; /* Reducido el tamaño de la descripción */
+    margin-bottom: 1rem;
+}
+
+.menu-item .price {
+    color: #FFC107;
+    font-size: 1.1rem; /* Reducido el tamaño del precio */
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #ac986d;
+    color: white;
+}
+
+.icons {
+    display: flex; /* Alinear los íconos en una fila */
+    justify-content: center; /* Centrarlos horizontalmente */
+    gap: 15px; /* Espaciado entre los íconos */
+    list-style: none; /* Eliminar viñetas del listado */
+    padding: 0; /* Quitar padding */
+    margin: 0; /* Quitar márgenes */
+}
+
+.icons li {
+    display: inline-block; /* Asegurarse de que los íconos sean elementos en línea */
+}
+
+.icons a {
+    text-decoration: none; /* Eliminar subrayados */
+    font-size: 24px; /* Tamaño del ícono */
+    color: #25D366; /* Estilo por defecto del ícono, puedes personalizarlo */
+    transition: color 0.3s ease; /* Animación de cambio de color */
+}
+
+.icons a:hover {
+    color: #FF5733; /* Cambiar color al pasar el mouse */
+}
+
+#add-product {
+    padding: 20px;
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+#add-product h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input, 
+.form-group textarea, 
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Media Queries para dispositivos móviles y tabletas */
+@media (max-width: 768px) {
+    .menu-items {
+        justify-content: center; /* Centrar los elementos del menú en pantallas más pequeñas */
+    }
+
+    .menu-item {
+        width: 90%; /* Hacer los ítems más anchos en pantallas más pequeñas */
+    }
+
+    header .logo {
+        flex-direction: column; /* Centrar el logo y el texto verticalmente en pantallas pequeñas */
+    }
+
+    header img {
+        max-width: 80px; /* Hacer el logo un poco más grande en pantallas pequeñas */
+    }
+
+    header nav ul {
+        flex-direction: column; /* Organizar los enlaces de navegación en columna en pantallas pequeñas */
+    }
+
+    header nav ul li a {
+        padding: 1rem 0; /* Aumentar el padding de los enlaces para mayor comodidad */
+    }
+
+    section h2 {
+        font-size: 1.5rem; /* Reducir el tamaño del encabezado en pantallas pequeñas */
+    }
+
+    .menu-item img {
+        max-height: 120px; /* Hacer que las imágenes sean más pequeñas en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px; /* Agregar espacio alrededor del cuerpo de la página en pantallas muy pequeñas */
+    }
+
+    .menu-item {
+        width: 100%; /* Los ítems ocuparán el 100% del ancho de la pantalla en dispositivos muy pequeños */
+        margin-bottom: 20px; /* Agregar un margen inferior para separar los ítems */
+    }
+
+    .menu-item h3 {
+        font-size: 1.2rem; /* Reducir el tamaño de los títulos en pantallas pequeñas */
+    }
+
+    .menu-item .price {
+        font-size: 1rem; /* Reducir el tamaño del precio en pantallas pequeñas */
+    }
+
+    .menu-item img {
+        max-height: 100px; /* Hacer que las imágenes sean aún más pequeñas en pantallas pequeñas */
+    }
+}

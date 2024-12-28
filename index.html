@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú - Pizzería La Curva</title>
+    <meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Header con logo -->
+    <header>
+        <div class="logo">
+            <img src="uploads/logo.png" alt="Logo Pizzería La Curva">
+            <h1>Pizzería La Curva</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#pizzas">Pizzas</a></li>
+                <li><a href="#hamburguesas">Hamburguesas</a></li>
+                <li><a href="#lasanas">Lasañas</a></li>
+                <li><a href="#bebidas">Bebidas</a></li>
+                <li><a href="#postres">Postres</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="add-product">
+        <h2>Menú Principal</h2>
+        <button id="load-form-btn">Agregar Nuevo Producto</button>
+        <div id="form-container"></div>
+    </section>
+    
+    <!-- Contenido principal -->
+    <main id="menu-container">
+        <!-- El contenido será cargado dinámicamente por script.js -->
+    </main>
+
+    <footer>
+        <div class="bottom">
+            <!-- Social Icons -->
+            <ul class="icons">
+                <li>
+                    <a href="https://wa.me/3136113555?text=¡Hola!%20Me%20gustaría%20saber%20más%20sobre%20Pizzería%20La%20Curva." 
+                       class="icon brands fa-whatsapp" target="_blank"></a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/PizzeriaLaCurvaCali/?locale=es_LA" 
+                       class="icon brands fa-facebook-f" target="_blank"></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/pizzerialacurva/?hl=es" 
+                       class="icon brands fa-instagram" target="_blank"></a>
+                </li>
+            </ul>
+        </div>
+        <p>Pizzería La Curva - Cali, Valle del Cauca, Colombia © 2024</p>
+    </footer>
+    <script>
+        // Cargar el formulario al hacer clic en el botón
+        document.getElementById('load-form-btn').addEventListener('click', async () => {
+            const formContainer = document.getElementById('form-container');
+            try {
+                const response = await fetch('formulario.html'); // Ruta al formulario
+                if (response.ok) {
+                    const formHTML = await response.text(); // Leer contenido como texto
+                    formContainer.innerHTML = formHTML; // Insertar formulario en el contenedor
+                } else {
+                    console.error('Error al cargar el formulario:', response.status);
+                }
+            } catch (error) {
+                console.error('Error al cargar el formulario:', error);
+            }
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

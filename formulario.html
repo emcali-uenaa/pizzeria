@@ -1,0 +1,32 @@
+<div id="product-form-container">
+    <h2>Agregar Nuevo Producto</h2>
+    <form id="product-form" action="api.php" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="name">Nombre del Producto:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Descripción:</label>
+            <textarea id="description" name="description" rows="3" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="price">Precio:</label>
+            <input type="number" id="price" name="price" step="0.01" required>
+        </div>
+        <div class="form-group">
+            <label for="category">Categoría:</label>
+            <select id="category" name="category" required>
+                <option value="pizzas">Pizza</option>
+                <option value="hamburguesas">Hamburguesa</option>
+                <option value="lasana">Lasaña</option>
+                <option value="bebidas">Bebida</option>
+                <option value="postres">Postre</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="image">Imagen del Producto:</label>
+            <input type="file" id="image" name="image" accept="image/*" required>
+        </div>
+        <button type="submit">Agregar Producto</button>
+    </form>
+</div>
